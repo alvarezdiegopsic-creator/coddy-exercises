@@ -147,3 +147,44 @@ num2 = float(input())
 
 result = num1 / num2
 print(result)
+
+#17 ─── Exercise: divisions  ───────────────────────
+# Task 1: Numbers divisible by 4 between 30-80
+print("Numbers divisible by 4 between 30-80:")
+# Your code here
+for i in range(30, 81):
+    if i % 4 == 0:
+        print(i, end=", ")
+print()  # Creates a new line for better readability
+
+# Task 2: First 8 odd numbers from 15
+print("\nFirst 8 odd numbers from 15:")
+# Your code here
+count_impar = 0
+for i in range(15, 80):
+    if i % 2 == 1:
+        count_impar += 1
+        print(i, end=", ")
+        if count_impar == 8:
+            break
+
+print()  # Creates a new line for better readability
+
+# Task 3: Counting backwards, divisible by 5
+print("\nCounting backwards, divisible by 5:")
+# Your code here
+for i in range(50, 9, -1):
+    if i % 5 == 0:
+        print(i, end=", ")
+print()  # Creates a new line for better readability
+
+# Task 4: Product of numbers divisible by 3
+print("\nProduct of numbers divisible by 3 (1-30):")
+# Your code here
+product = 1
+
+for i in range(1, 31):
+    if i % 3 == 0:
+        product *= i
+print(product, end=" ")
+# Remember: print only the number, not "Product = number"
