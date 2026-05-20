@@ -188,3 +188,12 @@ for i in range(1, 31):
         product *= i
 print(product, end=" ")
 # Remember: print only the number, not "Product = number"
+
+#18 ─── Exercise: function of def  ───────────────────────
+# Declare the function print_large_number below
+def print_large_number():
+    print(50005000)
+
+n = int(input())
+for i in range(n):
+    print_large_number()
