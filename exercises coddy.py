@@ -250,3 +250,15 @@ print(f"Welcome to FizzBuzz!")
 
 for n in range(1, string_num + 1):
     print(fizzbuzz(n))
+#21 ─── Exercise: Exercise of list changes ───────────────────────
+def change_element(lst, index, new_element):    
+    # Write code here
+    lst[index] = new_element
+    return(lst)
+#22 ─── Exercise: Exercise of list changes ───────────────────────
+def sum_elements(lst):
+    # Write code here
+    total_sum = 0
+    for i in range(len(lst)):
+        total_sum += lst[i]
+    print(total_sum)
