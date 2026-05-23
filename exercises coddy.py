@@ -194,6 +194,21 @@ print(product, end=" ")
 def print_large_number():
     print(50005000)
 
-n = int(input())
+n = int(input())                
 for i in range(n):
     print_large_number()
+#19 ─── Exercise: FizzBuzz ───────────────────────
+def fizzbuzz(num):
+
+    if num % 3 == 0 and num % 7 == 0:
+        return("FizzBuzz")
+    elif num % 3 == 0:
+        return("Fizz")
+    elif num % 7 == 0:
+        return("Buzz")
+    else:
+        return(num)
+
+string_num = int(input())
+result = fizzbuzz(string_num)
+print(f"Welcome to FizzBuzz!\n{result}")
