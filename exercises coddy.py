@@ -262,3 +262,8 @@ def sum_elements(lst):
     for i in range(len(lst)):
         total_sum += lst[i]
     print(total_sum)
+#23 ─── Exercise: Exercise of list changes ───────────────────────
+def change_element(list1, index, list2):
+    # Write your code below
+    list1[index] = list2[0]
+    print(list1)
