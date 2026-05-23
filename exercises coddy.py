@@ -208,7 +208,45 @@ def fizzbuzz(num):
         return("Buzz")
     else:
         return(num)
-
+#20 ─── Exercise: FizzBuzz continue ───────────────────────
 string_num = int(input())
 result = fizzbuzz(string_num)
 print(f"Welcome to FizzBuzz!\n{result}")
+
+def fizzbuzz(num):
+    
+    if num % 3 == 0 and num % 7 == 0:
+        return("FizzBuzz")
+    elif num % 3 == 0:
+        return("Fizz")
+    elif num % 7 == 0:
+        return("Buzz")
+    else:
+        return(num)
+
+string_num = int(input())
+result = fizzbuzz(string_num)
+print(f"Welcome to FizzBuzz!")
+
+for n in range(1, string_num + 1):
+    print(fizzbuzz(n))
+#20 ─── Exercise: FizzBuzz finally ───────────────────────
+def fizzbuzz(num):
+    
+    if num % 3 == 0 and num % 7 == 0:
+        return("FizzBuzz")
+    elif num % 3 == 0:
+        return("Fizz")
+    elif num % 7 == 0:
+        return("Buzz")
+    elif "3" in str(num) and num % 3 != 0 and num % 7 != 0:
+               return("Almost Fizz")
+    else:
+        return(num)
+
+string_num = int(input())
+result = fizzbuzz(string_num)
+print(f"Welcome to FizzBuzz!")
+
+for n in range(1, string_num + 1):
+    print(fizzbuzz(n))
