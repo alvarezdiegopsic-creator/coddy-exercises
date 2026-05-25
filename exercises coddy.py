@@ -267,3 +267,9 @@ def change_element(list1, index, list2):
     # Write your code below
     list1[index] = list2[0]
     print(list1)
+#24 ─── Exercise: pairs of numbers that multiply to give n using numbers from 1 to n (inclusive). ───────────────────────
+n = int(input())
+# Write your code below
+for i in range (1, n + 1):
+    if n % i == 0:
+       print(f"{i} {n//i}")
