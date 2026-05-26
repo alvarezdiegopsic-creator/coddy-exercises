@@ -273,3 +273,58 @@ n = int(input())
 for i in range (1, n + 1):
     if n % i == 0:
        print(f"{i} {n//i}")
+#24 ─── Exercise: Lists ───────────────────────
+# exercise 1
+shopping_list = ["bread", "eggs", "milk", "butter"]
+# exercise 2
+def values(lst):
+    # Write code here
+    for i in range (len(lst)):
+        print(lst[i])
+# exercise 3
+def sum_elements(lst):
+    # Write code here
+    total_sum = 0
+    for i in range(len(lst)):
+        total_sum += lst[i]
+    print(total_sum)
+# exercise 4
+def change_element(lst, index, new_element):
+    # Write code here
+    lst[index] = new_element
+    return(lst)
+# exercise 5
+def change_element(list1, index, list2):
+    # Write your code below
+    list1[index] = list2[0]
+    print(list1)
+# exercise 6
+def merge(lst1, lst2):
+    # Write code here
+    lst3 = lst1 + lst2
+    lst3.sort()
+    return(lst3)
+# exercise 7
+def combine_and_filter(lst, threshold):
+    # Write code here
+
+    result = []
+    for x in lst:
+        if x > threshold:
+            result.append(x)
+    result.sort()
+    return(result)
+# exercise 8
+def prod(lst):
+    # Write code here
+    total_sum = 1
+    for i in range(len(lst)):
+        total_sum *= lst[i]
+    return(total_sum)
+# exercise 9
+def reverse(lst):
+    # Write code here
+    new_lst = []
+    for i in range(len(lst) -1, -1, -1):
+        new_lst.append(lst[i])
+    return(new_lst)
