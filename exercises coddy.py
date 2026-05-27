@@ -336,3 +336,26 @@ for index, n in enumerate(lst):
     if n < 50 or n % 5 == 0:
         new_lst.append(index)
 print(new_lst)
+#25 ─── Exercise: Another exercise of enumerate function ───────────────────────
+new_lst = []
+for index, letter in enumerate(lst):
+    if (len(letter)) > 3 or (letter.startswith("a")):
+        new_lst.append(index)
+print(new_lst)
+#25 ─── Exercise: Iterating Over Strings ───────────────────────
+text = input()
+# Write your code below
+count = 0
+for i in text:
+      if i.lower() == ("p"):
+          count = count + 1
+print(count)
+#26 ─── Exercise: List Slicing ───────────────────────
+lst = input().split(",")
+# Write your code below
+n = len(lst)
+
+if len(lst) %  2 == 0:
+     print(lst[n//2 - 1 : n//2 + 1])
+else:
+     print(lst[n//2 - 1 : n//2 + 2])
