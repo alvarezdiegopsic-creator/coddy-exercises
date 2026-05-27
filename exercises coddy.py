@@ -328,3 +328,11 @@ def reverse(lst):
     for i in range(len(lst) -1, -1, -1):
         new_lst.append(lst[i])
     return(new_lst)
+#24 ─── Exercise: The enumerate function ───────────────────────
+lst = list(map(int, input().split(",")))
+# Write your code below
+new_lst = []
+for index, n in enumerate(lst):
+    if n < 50 or n % 5 == 0:
+        new_lst.append(index)
+print(new_lst)
