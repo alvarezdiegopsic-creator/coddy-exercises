@@ -359,3 +359,91 @@ if len(lst) %  2 == 0:
      print(lst[n//2 - 1 : n//2 + 1])
 else:
      print(lst[n//2 - 1 : n//2 + 2])
+#27 ─── Exercise: Opening Night Guest Count & Final Sales ────────────────────
+# Read the sentence from the guest list
+sentence = input()
+
+# Read the ticket prices (space-separated numbers)
+prices = input()
+
+# TODO: Count how many words in the sentence start with a vowel (a, e, i, o, u)
+# Hint: Split the sentence into words and check the first letter of each word
+vowel_count = 0
+
+for words in sentence.split():
+    if words.lower().startswith(("a", "e", "i", "o", "u")):
+        vowel_count += 1
+# TODO: Convert the prices string to a list of numbers and sum the last two
+# Hint: Split the prices, convert to integers, and add the last two elements
+sum_last_two = 0
+
+prices_lst = []
+prices_lst.append(float(prices))
+while True:
+    try:
+        prices_lst.append(float(input()))
+    except:
+        break
+sum_last_two = prices_lst[-1] + prices_lst[-2]
+# Print the results
+print(vowel_count)
+print(sum_last_two)
+#28 ─── Exercise: Aquarium Management System ────────────────────
+# Read the calculation type
+calc_type = int(input())
+
+if calc_type == 1:
+    # Type 1 - Penalty Calculator
+    violation_count = int(input())
+    subtotal = 50 + 25 * violation_count
+    if violation_count == 0:
+        penalty = subtotal
+    else:
+        penalty = subtotal + subtotal * 0.10 * (violation_count - 1)
+    print(int(penalty))
+    
+elif calc_type == 2:
+    # Type 2 - Arrangement Counter
+    n, r, P = map(int, input().split())
+    
+    # TODO: Calculate nPr mod P
+    # nPr = n! / (n-r)!
+    # Print the result modulo P
+    result = 1
+
+    for i in range(n-r+1, n+1):
+       result *= i
+
+    print(result % P)
+    
+elif calc_type == 3:
+    # Type 3 - Twin Prime Finder
+    N = int(input())
+    for p in range(2, N):
+        is_prime_p = True
+        for i in range(2, p):
+            if p % i == 0:
+                is_prime_p = False
+                break
+        is_prime_p2 = True
+        for i in range(2, p + 2):
+            if (p+2) % i == 0:
+                is_prime_p2 = False
+                break
+        if is_prime_p and is_prime_p2:
+            print(p, p+2)
+#29 ─── Exercise: Yard Sale Helper ────────────────────
+# Read the list of item prices (space-separated numbers)
+prices = input()
+
+# Read the seller's phone number
+phone = input()
+
+prices_list = list(map(int, prices.split()))
+result = prices_list[0] * prices_list[1]
+print(result)
+
+if len(phone) == 12 and phone[3] == "-" and phone[7] == "-" and phone[:3].isdigit() and phone[4:7].isdigit() and phone[8:].isdigit():
+    print("Valid")
+else:
+    print("Invalid")
